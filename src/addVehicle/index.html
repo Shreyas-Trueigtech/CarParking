@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <span style="display: flex">
+          <img
+            style="height: 6vh"
+            src="https://png.pngtree.com/png-vector/20220521/ourmid/pngtree-car-parking-symbol-for-designated-parking-area-vehicle-automobile-p-vector-png-image_45677364.jpg"
+          />
+          <p>XYZ Parking Mumbai</p>
+        </span>
+        <span style="display: flex; column-gap: 15px">
+          <a href="../../index.html">Home</a>
+          <a href="../about/index.html">About</a>
+          <a href="../addVehicle/index.html">Add Vehicle</a>
+        </span>
+      </div>
+      <hr />
+    </header>
+
+    <div id="toast" class="toast"></div>
+
+    <p id="title"></p>
+    <p id="desc"></p>
+
+    <div id="space">
+      <p>Total Space Available: <span id="availableSpace"></span>%</p>
+
+      <input
+        type="range"
+        id="spaceRange"
+        min="0"
+        max="100"
+        value="100"
+        disabled
+      />
+    </div>
+
+    <section>
+      <form
+        id="vehicleForm"
+        style="
+          background-color: rgb(227, 226, 226);
+          border-radius: 5px;
+          padding: 1px 10px;
+        "
+      >
+        <h3 id="formTittle"></h3>
+        <p id="titledesc"></p>
+        <div>
+          <label for="vehicleType">Vehicle Type</label>
+          <select id="vehicleType">
+            <option value="bike">Bike (1% space) 10₹</option>
+            <option value="car">Car (3% space) 30₹</option>
+            <option value="truck">Truck (5% space) 50₹</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="vehicleNumber">Vehicle Number</label>
+          <input
+            type="text"
+            id="vehicleNumber"
+            placeholder="e.g. MH12AB1234"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="number"
+            id="phoneNumber"
+            placeholder="e.g. 1234567890"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="owner">Owner</label>
+          <input type="text" id="owner" placeholder="e.g. Rohan" required />
+        </div>
+        <button type="submit" id="addBtn">ADD Vehicle</button>
+      </form>
+
+      <p id="ChnageInnerText"></p>
+
+      <div class="card">
+        <h2>Parked Vehicles</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Number</th>
+              <th>Owner</th>
+              <th>Space</th>
+              <th>Phone Number</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="vehicleTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <script type="module" src="./script.js" defer></script>
+  </body>
+</html>
