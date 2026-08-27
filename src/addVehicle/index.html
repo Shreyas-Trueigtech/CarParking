@@ -24,7 +24,7 @@
           align-items: center;
         "
       >
-        <span style="display: flex">
+        <span style="display: flex; justify-items: center; align-items: center;">
           <img
             style="height: 6vh"
             src="https://png.pngtree.com/png-vector/20220521/ourmid/pngtree-car-parking-symbol-for-designated-parking-area-vehicle-automobile-p-vector-png-image_45677364.jpg"
@@ -32,9 +32,9 @@
           <p>XYZ Parking Mumbai</p>
         </span>
         <span style="display: flex; column-gap: 15px">
-          <a href="../../index.html">Home</a>
-          <a href="../about/index.html">About</a>
-          <a href="../addVehicle/index.html">Add Vehicle</a>
+          <a  id="link" href="../../index.html">Home</a>
+          <a id="link" href="../about/index.html">About</a>
+          <a  id="link" href="../addVehicle/index.html">Add Vehicle</a>
         </span>
       </div>
       <hr />
@@ -46,8 +46,10 @@
     <p id="desc"></p>
 
     <div id="space">
-      <p>Total Space Available: <span id="availableSpace"></span>%</p>
-
+      <span>
+        <p id="total">Total Revenue: ₹<span id="revenu">0</span></p>
+        <p>Total Space Available: <span id="availableSpace"></span>%</p>
+      </span>
       <input
         type="range"
         id="spaceRange"

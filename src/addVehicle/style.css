@@ -182,3 +182,12 @@ td button:hover {
   opacity: 1;
   visibility: visible;
 }
+
+#total{
+text-align: center;
+background-color: #2ecc71;
+}
+
+#link{
+  font-weight: 100;
+}

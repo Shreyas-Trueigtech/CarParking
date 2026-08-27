@@ -37,7 +37,7 @@ class Car extends Vehicle {
 
 class Truck extends Vehicle {
   getSpacePercentage() {
-    return 100;
+    return 5;
   }
   getTypesofVehicle() {
     return "Truck";
@@ -107,6 +107,7 @@ const desc = document.getElementById("desc");
 const formTittle = document.getElementById("formTittle");
 const titledesc = document.getElementById("titledesc");
 const toast = document.getElementById("toast");
+const frevenu = document.getElementById("revenu");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -124,8 +125,9 @@ form.addEventListener("submit", function (e) {
   try {
     const vehicle = createVehicle(type, number, owner, phone, rate);
     parkingLot.addVehicle(vehicle);
-    updateAvailableSpace(rate);
-    parkingLot.addRevenu();
+    updateAvailableSpace();
+    parkingLot.addRevenu(vehicle.getParkingPrices());
+    updateRevenu();
     form.reset();
     renderTable();
   } catch (err) {
@@ -168,6 +170,9 @@ function updateAvailableSpace() {
   spaceRange.value = remaining;
 }
 
+function updateRevenu() {
+  frevenu.innerText = parkingLot.income;
+}
 renderTable();
 
 availableSpace.innerText = parkingLot.getAvailableSpace();
