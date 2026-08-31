@@ -3,6 +3,4 @@ In this Platform you can able to get to Get Daily Revenu Charges in it So you ca
 Beside this you can able able to add or Remove the Cars in this 
 Live Tracking of the Space that you have in your Parking Plot
 With list of All the Vehical Parked in Plot with there Owner and Owner Number
-On the /src/addVehicle/index.html you can able to add the New Vehical in this 
-and On /src/about/index.html on this About Company Deatils
 
