@@ -1,6 +1,6 @@
-import Bike from "../models/bike.js";
-import Car from "../models/car.js";
-import Truck from "../models/truck.js";
+import Bike from "../../models/vehicalesClass/models/bike.js"; 
+import Car from "../../models/vehicalesClass/models/car.js"; 
+import Truck from "../../models/vehicalesClass/models/truck.js";
 
 const vehicleTypes = {
   bike: Bike,

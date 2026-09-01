@@ -1,9 +1,9 @@
-import ParkingLot from "./services/parkingLot.js";
-import { createVehicle } from "./services/vehicleFactory.js";
+import ParkingLot from "./services/parkingLot/index.js";
+import { createVehicle } from "./services/vehicleFactory/index.js";
 
-import { renderTable } from "./ui/table.js";
-import { showEditDialog, hideEditDialog } from "./ui/editDialog.js";
-import { toastMessage } from "./ui/toast.js";
+import { renderTable } from "./ui/table/index.js";
+import { showEditDialog, hideEditDialog } from "./ui/editDialog/index.js";
+import { toastMessage } from "./ui/toast/index.js";
 
 const parkingLot = new ParkingLot(100);
 
@@ -105,8 +105,6 @@ form.addEventListener("submit", (event) => {
 function handleEdit(vehicle) {
   showEditDialog(vehicle, saveEditedVehicle);
 }
-
-updateUI();
 
 const title = document.getElementById("title");
 const desc = document.getElementById("desc");

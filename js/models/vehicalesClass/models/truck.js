@@ -1,4 +1,4 @@
-import Vehicle from "./vehicle.js";
+import Vehicle from "../index.js";
 
 export default class Truck extends Vehicle {
   getSpacePercentage() {
