@@ -106,10 +106,12 @@ function handleEdit(vehicle) {
   showEditDialog(vehicle, saveEditedVehicle);
 }
 
+updateUI();
+
 const title = document.getElementById("title");
-const desc = document.getElementById("desc");
-const formTittle = document.getElementById("formTittle");
 const titledesc = document.getElementById("titledesc");
+const formTittle = document.getElementById("formTittle");
+const desc = document.getElementById("desc");
 
 title.innerText = "Welcome to the XYZ CarParking";
 
